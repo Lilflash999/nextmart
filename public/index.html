@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="google-site-verification" content="pE_kvC9iV-kjNW8GyAswU2s74decCdomrFl_vDneXHs" />
+<link rel="stylesheet" href="./style.css">
+<title>NextMart</title>
+</head>
+<body>
+   <div id="navBar">
+    <div id="topNav">
+    <div id="right-select">
+     <span class="side-bar"><i class="fas fa-bars"></i></span>
+     <span class="web-name">NextMart</span>
+    </div>
+     <span class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="order-count"></span>
+     </span>
+    <div id="search">
+      <span id="searchIcon"><i class="fas fa-search"></i></span>
+      <input type="text" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search products, brands, categories" class="user-search" />
+    </div>
+    <div id="searchRes"></div>
+    </div>
+    <div class="market-category">
+      <div class="product-grid-container"></div>
+    </div>
+   </div>
+   <div class="spinner-overlay">
+      <div id="spinnerBody">
+        <div class="spinner">
+         <img src="https://www.image2url.com/r2/default/images/1786155032456-4fb0f25a-f843-43f2-be11-74a78866f22a.jpeg" alt="image" />
+        </div>
+        <div>
+          <span class="loading-text">Loading<div class="loading-dots"><span></span><span></span><span></span></div></span>
+        </div>
+      </div>
+   </div>
+   <div class="sidebar-overlay"></div>
+   <div class="sidebar">
+      <div class="sidebar-close"><i class="fas fa-times"></i></div>
+      <div class="sidebar-user">
+        <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+        <div class="user-info">
+          <span class="user-name">Guest User</span>
+          <span class="user-status">Not logged in</span>
+        </div>
+        <div class="user-actions">
+          <button class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</button>
+          <button class="signup-btn"><i class="fas fa-user-plus"></i> Sign Up</button>
+        </div>
+      </div>
+      <div class="sidebar-divider"></div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="active"><a href="/"><i class="fas fa-home"></i><span>Home</span></a></li>
+          <li><a href="#"><i class="fas fa-th-large"></i><span>Categories</span><i class="fas fa-chevron-right arrow"></i></a></li>
+          <li><a href="#"><i class="fas fa-fire"></i><span>Deals & Discounts</span><span class="badge">Hot</span></a></li>
+          <li><a href="#"><i class="fas fa-shopping-bag"></i><span>My Orders</span><span class="badge count">0</span></a></li>
+          <li><a href="#"><i class="fas fa-heart"></i><span>Wishlist</span><span class="badge count">0</span></a></li>
+          <li><a href="#"><i class="fas fa-shopping-cart"></i><span>Cart</span><span class="badge count">0</span></a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-features">
+        <div class="feature-item"><i class="fas fa-tag"></i><span>Sell on NextMart</span></div>
+        <div class="feature-item"><i class="fas fa-headset"></i><span>Customer Support</span></div>
+        <div class="feature-item"><i class="fas fa-question-circle"></i><span>Help & FAQ</span></div>
+      </div>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-footer">
+        <div class="footer-item"><i class="fas fa-cog"></i><span>Settings</span></div>
+        <div class="footer-item"><i class="fas fa-moon"></i><span>Dark Mode</span><label class="toggle-switch"><input type="checkbox"><span class="toggle-slider"></span></label></div>
+        <div class="footer-item logout"><i class="fas fa-sign-out-alt"></i><span>Logout</span></div>
+      </div>
+      <div class="sidebar-version"><span>NextMart v2.0</span></div>
+   </div>
+  <div class="whatsapp-icon" style="position: fixed; width: 70px; height: 70px; display: flex; align-items: center; border-radius: 50%; justify-content: center; background: rgba(255,255,255,0.02); backdrop-filter: blur(6px); bottom: 65px; right: -35px; -webkit-backdrop-filter: blur(6px); z-index: 99;">
+    <img style="position: relative; display: flex; width: 70%; height: 70%; box-shadow: 0 0 4px rgba(12,157,4,0.08); border-radius: 50%;" src="./whatsapp.png" alt="whatsapp icon" />
+  </div>
+   <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /login
+Disallow: /seller
+
+Sitemap: https://nextmart.hidenfree.com/sitemap.xml

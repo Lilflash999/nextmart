@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f5f5;
+}
+
+.preview {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.preview-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-img {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    min-height: 300px;
+    max-height: 600px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Navigation Arrows */
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.left-arrow {
+    left: 16px;
+}
+
+.right-arrow {
+    right: 16px;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.left-arrow:active,
+.right-arrow:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* Image Counter */
+.image-count {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 2;
+}
+
+.image-count span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.image-count span.active {
+    background: #fff;
+    transform: scale(1.2);
+}
+
+.image-count span:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Product Details */
+.product-details {
+    padding: 0 4px;
+}
+
+.product-name {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: -0.02em;
+    color: #000;
+    margin-bottom: 8px;
+    padding: 0 4px;
+}
+
+#product-desc {
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+    border-left: 3px solid #000;
+}
+
+.product-desc {
+    display: block;
+}
+
+/* Reviews and Stars */
+.border {
+    position: relative;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 10px;
+}
+
+.review-stars {
+    display: flex;
+    gap: 8px;
+    font-size: 28px;
+    color: #fff;
+    text-shadow: 0 0 1px #000;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.review-stars span {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.review-stars span:hover {
+    transform: scale(1.15);
+    color: #ffd700;
+}
+
+/* Previews Section */
+#previews {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#previews h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+#previewContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+    min-height: 280px;
+    border-radius: 18px;
+    padding: 6px 6px;
+}
+
+.preview-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 180px;
+    border: 2px solid #000;
+    border-radius: 18px;
+    padding: 6px 8px;
+}
+
+.preview-details  {
+    position: relative;
+    display: flex;
+    top: 12px;
+    left: 12px; 
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+
+.time-cat {
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0 16px;
+    color: #6b7a8f;
+    font-size: 13px;
+}
+
+.time-cat::before,
+.time-cat::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #000;
+}
+
+#comment-msg {
+    width: 100%;
+    min-height: 45px;
+    display: flex;
+    align-items: flex-start;
+    font-family: 'inter', sans-serif;
+    letter-spacing: -0.02rem;
+    word-spacing: -0.02rem;
+    margin-bottom: 22px;
+    color: #000;
+    font-weight: 700;
+    font-style: italic;
+    padding: 4px 6px;
+}
+
+.time-sent {
+    position: absolute;
+    right: 9px;
+    bottom: 8px;
+}
+
+.previewer-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: inline-flex;
+    font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+    background: #8C96FF;
+    font-family: 'Orbitron', serif;
+    font-style: italic;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+}
+
+.previewer-name {
+    font-size: 14px;
+    font-family: 'inter', serif;
+    font-weight: 700;
+    margin-top: 7px;
+}
+
+#previewContainer img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+#previewContainer img:hover {
+    transform: scale(1.05);
+    border-color: #000;
+}
+
+#previewInput {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.preview-input {
+    flex: 1;
+    width: 100%;
+    min-height: 60px;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+    caret-color: #A2A2A2;
+}
+
+.preview-input:focus {
+    outline: none;
+    border-color: #000;
+}
+
+.send-preview {
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    height: 60px;
+}
+
+.send-preview:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.send-preview:active {
+    transform: translateY(0);
+}
+
+.send-preview span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .preview {
+        padding: 12px;
+    }
+
+    .product-img {
+        height: 40vh;
+        min-height: 250px;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .left-arrow {
+        left: 10px;
+    }
+
+    .right-arrow {
+        right: 10px;
+    }
+
+    .product-name {
+        font-size: 20px;
+    }
+
+    #product-desc {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .review-stars {
+        font-size: 24px;
+    }
+
+    #previewContainer {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    }
+
+    #previewContainer img {
+        height: 60px;
+    }
+
+    .send-preview {
+        padding: 8px 16px;
+        height: 50px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-img {
+        height: 35vh;
+        min-height: 200px;
+    }
+
+    .image-count {
+        padding: 6px 12px;
+        gap: 6px;
+    }
+
+    .image-count span {
+        width: 8px;
+        height: 8px;
+    }
+
+    #previewInput {
+        flex-direction: column;
+    }
+
+    .send-preview {
+        width: 100%;
+        height: 44px;
+        justify-content: center;
+    }
+
+    .preview-input {
+        min-height: 50px;
+    }
+}
+
+.input-preview {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.user-id {
+    position: absolute;
+    right: 8px;
+    bottom: 0;
+    width: 75px;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    -webkit-tap-highlight-color: transparent;
+    color: #333;
+    background: transparent;
+    padding-left: 18px;
+    font-weight: 600;
+    font-size: 8px;
+    font-family: 'Orbitron', serif;
+}
+
+.user-id:hover {
+    background: transparent;
+    transform: scale(1.05)translateX(10%);
+}
